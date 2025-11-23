@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\appdata\\weights.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:appdata\\weights.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\models\\weightconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:models\\weightconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\models\\matchcandidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:models\\matchcandidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\models\\rowrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:models\\rowrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\services\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:services\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\services\\weightlearningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:services\\weightlearningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\services\\similarityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:services\\similarityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "weights.json",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\AppData\\weights.json",
+              "RelativeDocumentMoniker": "AppData\\weights.json",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\AppData\\weights.json",
+              "RelativeToolTip": "AppData\\weights.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-23T18:29:01.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeightConfig.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\WeightConfig.cs",
+              "RelativeDocumentMoniker": "Models\\WeightConfig.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\WeightConfig.cs",
+              "RelativeToolTip": "Models\\WeightConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:25:40.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MatchCandidate.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\MatchCandidate.cs",
+              "RelativeDocumentMoniker": "Models\\MatchCandidate.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\MatchCandidate.cs",
+              "RelativeToolTip": "Models\\MatchCandidate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:25:03.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RowRecord.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\RowRecord.cs",
+              "RelativeDocumentMoniker": "Models\\RowRecord.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Models\\RowRecord.cs",
+              "RelativeToolTip": "Models\\RowRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:24:39.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\StorageService.cs",
+              "RelativeDocumentMoniker": "Services\\StorageService.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\StorageService.cs",
+              "RelativeToolTip": "Services\\StorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:23:52.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeightLearningService.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\WeightLearningService.cs",
+              "RelativeDocumentMoniker": "Services\\WeightLearningService.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\WeightLearningService.cs",
+              "RelativeToolTip": "Services\\WeightLearningService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:23:31.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SimilarityService.cs",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\SimilarityService.cs",
+              "RelativeDocumentMoniker": "Services\\SimilarityService.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Services\\SimilarityService.cs",
+              "RelativeToolTip": "Services\\SimilarityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:22:50.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T18:18:49.918Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
