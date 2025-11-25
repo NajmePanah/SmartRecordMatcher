@@ -1,5 +1,4 @@
 ﻿using SmartRecordMatcher.Models;
-using SmartRecordMatcher.Models.SmartRecordMatcher.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,37 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SmartRecordMatcher.Models
 {
-    namespace SmartRecordMatcher.Models
+    public class WeightConfig
     {
-        public class WeightConfig
-        {
-            // -------- Top level weights --------
-            public double StructuralWeight { get; set; } = 0.4;
-            public double TokenWeight { get; set; } = 0.4;
-            public double EditWeight { get; set; } = 0.2;
+        // top level
+        public double StructuralWeight { get; set; } = 0.45;
+        public double TokenWeight { get; set; } = 0.35;
+        public double EditWeight { get; set; } = 0.20;
 
-            // -------- Field-level structure weights --------
-            public FieldWeights Fields { get; set; } = new();
+        // field-level weights for structural layer
+        public FieldWeights Fields { get; set; } = new FieldWeights();
 
-            // -------- Token importance map --------
-            public Dictionary<string, double> TokenImportance { get; set; } = new();
-        }
-
-        public class FieldWeights
-        {
-            public double City { get; set; } = 0.2;
-            public double Region { get; set; } = 0.15;
-            public double Street { get; set; } = 0.25;
-            public double Alley { get; set; } = 0.15;
-            public double Plaque { get; set; } = 0.15;
-            public double Unit { get; set; } = 0.10;
-        }
+        // optional importance map for tokens
+        public Dictionary<string, double> TokenImportance { get; set; } = new Dictionary<string, double>();
     }
 
-
+    public class FieldWeights
+    {
+        public double City { get; set; } = 0.15;
+        public double Region { get; set; } = 0.10;
+        public double Street { get; set; } = 0.35;
+        public double SubStreet { get; set; } = 0.10;
+        public double Alley { get; set; } = 0.10;
+        public double Plaque { get; set; } = 0.10;
+        public double Unit { get; set; } = 0.05;
+    }
 }

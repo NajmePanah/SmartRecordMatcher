@@ -89,11 +89,22 @@ namespace SmartRecordMatcher.Forms
         private List<ComparisonResult> ComputeAll(List<RowRecord> left, List<RowRecord> right)
         {
             var outList = new List<ComparisonResult>();
+            int total = left.Count;
             int i = 0;
+
+            // موتور جدید
+            var cfg = new WeightConfig();
+            var similarityEngine = new AddressSimilarityEnginePro(cfg);
 
             foreach (var l in left)
             {
-                var best = new ComparisonResult { Left = l, BestScore = 0, BestMatch = null, Reason = "" };
+                var best = new ComparisonResult
+                {
+                    Left = l,
+                    BestScore = 0,
+                    BestMatch = null,
+                    Reason = ""
+                };
 
                 foreach (var r in right)
                 {
@@ -108,8 +119,13 @@ namespace SmartRecordMatcher.Forms
                 }
 
                 outList.Add(best);
+
+                // UI progress
                 i++;
-                this.Invoke((Action)(() => progressBar.Value = i));
+                this.Invoke((Action)(() =>
+                {
+                    progressBar.Value = Math.Min(i, total);
+                }));
             }
 
             return outList;
@@ -117,6 +133,11 @@ namespace SmartRecordMatcher.Forms
 
 
         private void btnLoadLeft_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompute_Click_1(object sender, EventArgs e)
         {
 
         }
