@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartRecordMatcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd63dc5526c1c310a0fb2cd84c955a6a6118c6a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+595b0bf31d378096323025ec3f022bc510de1e68")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartRecordMatcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartRecordMatcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

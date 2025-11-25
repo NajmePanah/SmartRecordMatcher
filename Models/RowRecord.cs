@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SmartRecordMatcher.Models
 {
-    internal class RowRecord
+    public class RowRecord
     {
+        public string Id { get; set; }
+        public string OriginalAddress { get; set; }
     }
+
 }
