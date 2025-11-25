@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\",
+  "WorkspaceRootPath": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\smartrecordmatcher\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\forms\\addressmatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\addressmatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -55,10 +55,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAALIBAAAAAAAAAAAuwN4BAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T06:33:30.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddressMatcher.cs [Design]",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressMatcher.cs",
+              "RelativeDocumentMoniker": "Forms\\AddressMatcher.cs",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressMatcher.cs [Design]",
+              "RelativeToolTip": "Forms\\AddressMatcher.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T06:13:42.123Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\MainForm.cs",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\MainForm.cs [Design]",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\MainForm.cs [Design]",
               "RelativeToolTip": "Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T18:32:16.054Z",
