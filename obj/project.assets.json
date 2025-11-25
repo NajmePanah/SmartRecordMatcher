@@ -297,23 +297,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\0946171297\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\SmartRecordMatcher.csproj",
+      "projectUniqueName": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\SmartRecordMatcher.csproj",
       "projectName": "SmartRecordMatcher",
-      "projectPath": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\SmartRecordMatcher.csproj",
-      "packagesPath": "C:\\Users\\0946171297\\.nuget\\packages\\",
-      "outputPath": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\obj\\",
+      "projectPath": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\SmartRecordMatcher.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\0946171297\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -340,7 +340,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -370,7 +370,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

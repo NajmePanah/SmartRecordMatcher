@@ -1,6 +1,26 @@
-﻿{
-  "EconomicCode": 0.5,
-  "Name": 0.2,
-  "Address": 0.2,
-  "Amount": 0.1
+﻿//{
+//  "EconomicCode": 0.5,
+//  "Name": 0.2,
+//  "Address": 0.2,
+//  "Amount": 0.1
+//}
+
+{
+  "StructuralWeight": 0.4,
+  "TokenWeight": 0.4,
+  "EditWeight": 0.2,
+
+  "Fields": {
+    "City": 0.2,
+    "Region": 0.15,
+    "Street": 0.25,
+    "Alley": 0.15,
+    "Plaque": 0.15,
+    "Unit": 0.10
+  },
+
+  "TokenImportance": {
+    "تهران": 2.0,
+    "خیابان": 1.0
+  }
 }

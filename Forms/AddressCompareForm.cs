@@ -1,4 +1,5 @@
-﻿using SmartRecordMatcher.Models;
+﻿using SmartRecordMatcher.Engine;
+using SmartRecordMatcher.Models;
 using SmartRecordMatcher.Services;
 using System;
 using System.Collections.Generic;
@@ -93,9 +94,11 @@ namespace SmartRecordMatcher.Forms
             foreach (var l in left)
             {
                 var best = new ComparisonResult { Left = l, BestScore = 0, BestMatch = null, Reason = "" };
+
                 foreach (var r in right)
                 {
-                    double score = similarityEngine.ComputeAddressSimilarity(l.OriginalAddress, r.OriginalAddress);
+                    double score = similarityEngine.Compute(l.OriginalAddress, r.OriginalAddress);
+
                     if (score > best.BestScore)
                     {
                         best.BestScore = score;
@@ -111,6 +114,7 @@ namespace SmartRecordMatcher.Forms
 
             return outList;
         }
+
 
         private void btnLoadLeft_Click_1(object sender, EventArgs e)
         {
