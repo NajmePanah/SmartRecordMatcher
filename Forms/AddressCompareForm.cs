@@ -3,6 +3,8 @@ using SmartRecordMatcher.Models;
 using SmartRecordMatcher.Services;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,146 +12,263 @@ namespace SmartRecordMatcher.Forms
 {
     public partial class AddressCompareForm : Form
     {
+        // data
         private List<RowRecord> leftRecords = new();
         private List<RowRecord> rightRecords = new();
-        private AddressSimilarityEngine similarityEngine;
+
+        // step state
+        private int currentLeftIndex = 0;
+        private int topN = 10;
+
+        // engine & config
+        private WeightConfig cfg;
+        private AddressSimilarityEnginePro engine;
+
+        // precomputed grouped results (optional caching)
+        private List<ComparisonBundle> groupedResults = new();
 
         public AddressCompareForm()
         {
             InitializeComponent();
 
-            var storage = new StorageService();
-            var config = storage.LoadWeightConfig();
-            similarityEngine = new AddressSimilarityEngine(config);
-
+            // wire event handlers (designer file does NOT attach clicks)
             btnLoadLeft.Click += BtnLoadLeft_Click;
             btnLoadRight.Click += BtnLoadRight_Click;
             btnCompute.Click += BtnCompute_Click;
+            btnNext.Click += BtnNext_Click;
+
+            // try load config
+            try
+            {
+                cfg = new StorageService().LoadWeightConfig() ?? new WeightConfig();
+            }
+            catch
+            {
+                cfg = new WeightConfig();
+            }
+
+            engine = new AddressSimilarityEnginePro(cfg);
         }
 
+        // -------------------------
+        // Load left file
+        // -------------------------
         private void BtnLoadLeft_Click(object sender, EventArgs e)
         {
             using var ofd = new OpenFileDialog();
-            ofd.Filter = "Excel Files|*.xlsx;*.xls";
+            ofd.Filter = "Excel Files|*.xlsx;*.xls|CSV Files|*.csv|All Files|*.*";
+            ofd.Title = "Select left file (records to match)";
             if (ofd.ShowDialog() != DialogResult.OK) return;
+
             txtLeftPath.Text = ofd.FileName;
-            leftRecords = ExcelReaderService.ReadSimpleAddressFile(ofd.FileName);
-            lblStatus.Text = $"Loaded {leftRecords.Count} left records";
+            try
+            {
+                leftRecords = ExcelReaderService.ReadSimpleAddressFile(ofd.FileName) ?? new List<RowRecord>();
+                lblStatus.Text = $"Loaded LEFT: {leftRecords.Count} rows";
+                currentLeftIndex = 0;
+                groupedResults.Clear();
+                btnNext.Enabled = false;
+                lblCurrentLeft.Text = "Current Left Record: -";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to read left file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        // -------------------------
+        // Load right file
+        // -------------------------
         private void BtnLoadRight_Click(object sender, EventArgs e)
         {
             using var ofd = new OpenFileDialog();
-            ofd.Filter = "Excel Files|*.xlsx;*.xls";
+            ofd.Filter = "Excel Files|*.xlsx;*.xls|CSV Files|*.csv|All Files|*.*";
+            ofd.Title = "Select right file (candidate records)";
             if (ofd.ShowDialog() != DialogResult.OK) return;
+
             txtRightPath.Text = ofd.FileName;
-            rightRecords = ExcelReaderService.ReadSimpleAddressFile(ofd.FileName);
-            lblStatus.Text = $"Loaded {rightRecords.Count} right records";
+            try
+            {
+                rightRecords = ExcelReaderService.ReadSimpleAddressFile(ofd.FileName) ?? new List<RowRecord>();
+                lblStatus.Text = $"Loaded RIGHT: {rightRecords.Count} rows";
+                groupedResults.Clear();
+                btnNext.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to read right file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        // -------------------------
+        // Compute all groups (async)
+        // -------------------------
         private async void BtnCompute_Click(object sender, EventArgs e)
         {
-            if (leftRecords.Count == 0 || rightRecords.Count == 0)
+            if (leftRecords == null || leftRecords.Count == 0)
             {
-                MessageBox.Show("Please load both files first.");
+                MessageBox.Show("Please load the left file first.", "Missing data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            if (rightRecords == null || rightRecords.Count == 0)
+            {
+                MessageBox.Show("Please load the right file first.", "Missing data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // prepare UI
             dgvResults.Rows.Clear();
+            dgvResults.Columns.Clear();
+            dgvResults.Columns.Add("RightID", "Right ID");
+            dgvResults.Columns.Add("RightAddr", "Right Address");
+            dgvResults.Columns.Add("Score", "Similarity (%)");
+            dgvResults.Columns.Add("Reason", "Reason");
+
+            AdjustGridColumns();
+
             progressBar.Minimum = 0;
             progressBar.Maximum = leftRecords.Count;
             progressBar.Value = 0;
-            lblStatus.Text = "Computing...";
+            lblStatus.Text = "Computing similarity groups... (this may take a while)";
 
-            var results = await Task.Run(() => ComputeAll(leftRecords, rightRecords));
+            // compute in background
+            groupedResults = await Task.Run(() => ComputeGrouped(leftRecords, rightRecords));
 
-            dgvResults.Columns.Clear();
-            dgvResults.Columns.Add("LeftId", "Left Id");
-            dgvResults.Columns.Add("LeftAddress", "Left Address");
-            dgvResults.Columns.Add("BestRightId", "Best Right Id");
-            dgvResults.Columns.Add("BestRightAddress", "Best Right Address");
-            dgvResults.Columns.Add("Similarity", "Similarity (%)");
-            dgvResults.Columns.Add("Reason", "Reason");
-            AdjustGridColumns();
-            foreach (var r in results)
-            {
-                dgvResults.Rows.Add(
-                    r.Left.Id,
-                    r.Left.OriginalAddress,
-                    r.BestMatch?.Id ?? "",
-                    r.BestMatch?.OriginalAddress ?? "",
-                    (r.BestScore * 100).ToString("F2"),
-                    r.Reason ?? ""
-                );
-            }
-
-            lblStatus.Text = $"Done. Processed {results.Count} records.";
+            lblStatus.Text = $"Computed {groupedResults.Count} groups.";
+            currentLeftIndex = 0;
+            btnNext.Enabled = groupedResults.Count > 0;
+            ShowCurrentLeftRecord();
         }
 
-        private List<ComparisonResult> ComputeAll(List<RowRecord> left, List<RowRecord> right)
+        // -------------------------
+        // Compute grouped results (synchronous - called inside Task.Run)
+        // -------------------------
+        private List<ComparisonBundle> ComputeGrouped(List<RowRecord> left, List<RowRecord> right)
         {
-            var outList = new List<ComparisonResult>();
+            var list = new List<ComparisonBundle>();
             int total = left.Count;
             int i = 0;
 
-            // موتور جدید
-            var cfg = new WeightConfig();
-            var similarityEngine = new AddressSimilarityEnginePro(cfg);
+            // local engine instance to avoid cross-thread issues with LastReason
+            var localEngine = new AddressSimilarityEnginePro(cfg);
 
             foreach (var l in left)
             {
-                var best = new ComparisonResult
-                {
-                    Left = l,
-                    BestScore = 0,
-                    BestMatch = null,
-                    Reason = ""
-                };
+                var scores = new List<ComparisonResult>();
 
                 foreach (var r in right)
                 {
-                    double score = similarityEngine.Compute(l.OriginalAddress, r.OriginalAddress);
-
-                    if (score > best.BestScore)
+                    double sc = localEngine.Compute(l.OriginalAddress ?? "", r.OriginalAddress ?? "");
+                    scores.Add(new ComparisonResult
                     {
-                        best.BestScore = score;
-                        best.BestMatch = r;
-                        best.Reason = similarityEngine.LastReason;
-                    }
+                        Left = l,
+                        BestMatch = r,
+                        BestScore = sc,
+                        Reason = localEngine.LastReason
+                    });
                 }
 
-                outList.Add(best);
+                var top = scores.OrderByDescending(x => x.BestScore).Take(topN).ToList();
 
-                // UI progress
+                list.Add(new ComparisonBundle
+                {
+                    LeftRecord = l,
+                    Candidates = top
+                });
+
                 i++;
+                // update progress on UI thread
                 this.Invoke((Action)(() =>
                 {
                     progressBar.Value = Math.Min(i, total);
+                    lblStatus.Text = $"Computing... {i}/{total}";
                 }));
             }
 
-            return outList;
+            return list;
         }
+
+        // -------------------------
+        // Show current left record and its top-N matches
+        // -------------------------
+        private void ShowCurrentLeftRecord()
+        {
+            if (groupedResults == null || groupedResults.Count == 0)
+            {
+                lblCurrentLeft.Text = "Current Left Record: -";
+                dgvResults.Rows.Clear();
+                return;
+            }
+
+            if (currentLeftIndex < 0) currentLeftIndex = 0;
+            if (currentLeftIndex >= groupedResults.Count) currentLeftIndex = groupedResults.Count - 1;
+
+            var group = groupedResults[currentLeftIndex];
+
+            lblCurrentLeft.Text = $"Left [{currentLeftIndex + 1}/{groupedResults.Count}]  ID={group.LeftRecord?.Id ?? "-"}  {group.LeftRecord?.OriginalAddress ?? ""}";
+
+            dgvResults.Rows.Clear();
+            foreach (var c in group.Candidates)
+            {
+                dgvResults.Rows.Add(
+                    c.BestMatch?.Id ?? "",
+                    c.BestMatch?.OriginalAddress ?? "",
+                    (c.BestScore * 100).ToString("F2"),
+                    c.Reason ?? ""
+                );
+            }
+
+            //lblStatus.Text = $"Showing {currentLeftIndex + 1}/{groupedResults.Count}: ";
+            lblCurrentLeft.Text = $"Left [{currentLeftIndex + 1}/{groupedResults.Count}]  Address={group.LeftRecord?.OriginalAddress ?? "-"}";
+            AdjustGridColumns();
+        }
+
+        // -------------------------
+        // Next button
+        // -------------------------
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            if (groupedResults == null || groupedResults.Count == 0) return;
+
+            if (currentLeftIndex < groupedResults.Count - 1)
+            {
+                currentLeftIndex++;
+                ShowCurrentLeftRecord();
+            }
+            else
+            {
+                MessageBox.Show("Reached end of left records.", "Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        // -------------------------
+        // helper: adjust columns
+        // -------------------------
         private void AdjustGridColumns()
         {
-            dgvResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-
-            //foreach (DataGridViewColumn col in dgvResults.Columns)
-            //    col.Width = 350;  // انتخاب پیشنهادی
-
-            dgvResults.Columns["LeftAddress"].Width = 400;
-            dgvResults.Columns["BestRightAddress"].Width = 400;
-            dgvResults.Columns["Reason"].Width = 400; // مخصوص توضیح تشریحی
+            try
+            {
+                if (dgvResults.Columns.Contains("RightAddr"))
+                    dgvResults.Columns["RightAddr"].Width = 420;
+                if (dgvResults.Columns.Contains("Reason"))
+                    dgvResults.Columns["Reason"].Width = 520;
+                if (dgvResults.Columns.Contains("Score"))
+                    dgvResults.Columns["Score"].Width = 120;
+                if (dgvResults.Columns.Contains("RightID"))
+                    dgvResults.Columns["RightID"].Width = 100;
+            }
+            catch
+            {
+                // ignore sizing errors
+            }
         }
+    }
 
-        private void btnLoadLeft_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCompute_Click_1(object sender, EventArgs e)
-        {
-
-        }
+    // simple helper types (kept local to form file)
+    public class ComparisonBundle
+    {
+        public RowRecord LeftRecord { get; set; }
+        public List<ComparisonResult> Candidates { get; set; } = new();
     }
 }
