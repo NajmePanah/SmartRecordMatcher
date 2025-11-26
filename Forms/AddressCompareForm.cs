@@ -70,7 +70,7 @@ namespace SmartRecordMatcher.Forms
             dgvResults.Columns.Add("BestRightAddress", "Best Right Address");
             dgvResults.Columns.Add("Similarity", "Similarity (%)");
             dgvResults.Columns.Add("Reason", "Reason");
-
+            AdjustGridColumns();
             foreach (var r in results)
             {
                 dgvResults.Rows.Add(
@@ -130,7 +130,17 @@ namespace SmartRecordMatcher.Forms
 
             return outList;
         }
+        private void AdjustGridColumns()
+        {
+            dgvResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
 
+            //foreach (DataGridViewColumn col in dgvResults.Columns)
+            //    col.Width = 350;  // انتخاب پیشنهادی
+
+            dgvResults.Columns["LeftAddress"].Width = 400;
+            dgvResults.Columns["BestRightAddress"].Width = 400;
+            dgvResults.Columns["Reason"].Width = 400; // مخصوص توضیح تشریحی
+        }
 
         private void btnLoadLeft_Click_1(object sender, EventArgs e)
         {

@@ -1,34 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\",
+  "WorkspaceRootPath": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\engine\\addresssimilarityenginepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:engine\\addresssimilarityenginepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\services\\addressparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:services\\addressparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\forms\\addresscompareform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\addresscompareform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\services\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:services\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\engine\\addresssimilarityengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:engine\\addresssimilarityengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|d:\\c#\\smartrecordmatcher\\14040904\\smartrecordmatcher\\forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:forms\\addresscompareform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|g:\\projects\\smartrecordmatcher\\smartrecordmatcher\\engine\\addresssimilarityenginepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77639A42-46F1-4C11-B5DC-0A6C0D2BDCC1}|SmartRecordMatcher.csproj|solutionrelative:engine\\addresssimilarityenginepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -74,93 +54,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddressParser.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Services\\AddressParser.cs",
-              "RelativeDocumentMoniker": "Services\\AddressParser.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Services\\AddressParser.cs",
-              "RelativeToolTip": "Services\\AddressParser.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAkwFkAAABIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AddressCompareForm.cs",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AddressCompareForm.cs",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs*",
+              "RelativeToolTip": "Forms\\AddressCompareForm.cs*",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswIkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T18:39:09.671Z",
+              "WhenOpened": "2025-11-26T04:32:48.336Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddressCompareForm.cs [Design]",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AddressCompareForm.cs",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs [Design]*",
+              "RelativeToolTip": "Forms\\AddressCompareForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T04:32:45.139Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AddressCompareForm.Designer.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\AddressCompareForm.Designer.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.Designer.cs",
-              "RelativeToolTip": "Forms\\AddressCompareForm.Designer.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAwwJIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:32:59.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AddressSimilarityEnginePro.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Engine\\AddressSimilarityEnginePro.cs",
+              "DocumentMoniker": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Engine\\AddressSimilarityEnginePro.cs",
               "RelativeDocumentMoniker": "Engine\\AddressSimilarityEnginePro.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Engine\\AddressSimilarityEnginePro.cs",
+              "ToolTip": "G:\\Projects\\SmartRecordMatcher\\SmartRecordMatcher\\Engine\\AddressSimilarityEnginePro.cs",
               "RelativeToolTip": "Engine\\AddressSimilarityEnginePro.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAmwJQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:27:18.5Z",
+              "WhenOpened": "2025-11-26T04:31:52.75Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StorageService.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Services\\StorageService.cs",
-              "RelativeDocumentMoniker": "Services\\StorageService.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Services\\StorageService.cs",
-              "RelativeToolTip": "Services\\StorageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:21:47.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddressSimilarityEngine.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Engine\\AddressSimilarityEngine.cs",
-              "RelativeDocumentMoniker": "Engine\\AddressSimilarityEngine.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Engine\\AddressSimilarityEngine.cs",
-              "RelativeToolTip": "Engine\\AddressSimilarityEngine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:21:34.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddressCompareForm.cs",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs",
-              "RelativeDocumentMoniker": "Forms\\AddressCompareForm.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs",
-              "RelativeToolTip": "Forms\\AddressCompareForm.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAswIQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:18:58.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddressCompareForm.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs",
-              "RelativeDocumentMoniker": "Forms\\AddressCompareForm.cs",
-              "ToolTip": "D:\\C#\\SmartRecordMatcher\\14040904\\SmartRecordMatcher\\Forms\\AddressCompareForm.cs [Design]",
-              "RelativeToolTip": "Forms\\AddressCompareForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:18:45.171Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

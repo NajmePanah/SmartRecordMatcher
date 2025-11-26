@@ -45,21 +45,19 @@
             dgvResults.AllowUserToAddRows = false;
             dgvResults.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvResults.Location = new Point(23, 213);
-            dgvResults.Margin = new Padding(3, 4, 3, 4);
+            dgvResults.Location = new Point(20, 160);
             dgvResults.Name = "dgvResults";
             dgvResults.ReadOnly = true;
             dgvResults.RowHeadersVisible = false;
             dgvResults.RowHeadersWidth = 51;
-            dgvResults.Size = new Size(1063, 640);
+            dgvResults.Size = new Size(1021, 480);
             dgvResults.TabIndex = 0;
             // 
             // btnLoadLeft
             // 
-            btnLoadLeft.Location = new Point(23, 27);
-            btnLoadLeft.Margin = new Padding(3, 4, 3, 4);
+            btnLoadLeft.Location = new Point(20, 20);
             btnLoadLeft.Name = "btnLoadLeft";
-            btnLoadLeft.Size = new Size(171, 40);
+            btnLoadLeft.Size = new Size(150, 30);
             btnLoadLeft.TabIndex = 1;
             btnLoadLeft.Text = "Load File 1 (Left)";
             btnLoadLeft.UseVisualStyleBackColor = true;
@@ -67,20 +65,18 @@
             // 
             // btnLoadRight
             // 
-            btnLoadRight.Location = new Point(23, 80);
-            btnLoadRight.Margin = new Padding(3, 4, 3, 4);
+            btnLoadRight.Location = new Point(20, 60);
             btnLoadRight.Name = "btnLoadRight";
-            btnLoadRight.Size = new Size(171, 40);
+            btnLoadRight.Size = new Size(150, 30);
             btnLoadRight.TabIndex = 2;
             btnLoadRight.Text = "Load File 2 (Right)";
             btnLoadRight.UseVisualStyleBackColor = true;
             // 
             // btnCompute
             // 
-            btnCompute.Location = new Point(23, 147);
-            btnCompute.Margin = new Padding(3, 4, 3, 4);
+            btnCompute.Location = new Point(20, 110);
             btnCompute.Name = "btnCompute";
-            btnCompute.Size = new Size(229, 48);
+            btnCompute.Size = new Size(200, 36);
             btnCompute.TabIndex = 5;
             btnCompute.Text = "Compute Similarities";
             btnCompute.UseVisualStyleBackColor = true;
@@ -88,43 +84,40 @@
             // 
             // progressBar
             // 
-            progressBar.Location = new Point(274, 147);
-            progressBar.Margin = new Padding(3, 4, 3, 4);
+            progressBar.Location = new Point(240, 110);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(457, 48);
+            progressBar.Size = new Size(400, 36);
             progressBar.TabIndex = 6;
             // 
             // txtLeftPath
             // 
-            txtLeftPath.Location = new Point(217, 27);
-            txtLeftPath.Margin = new Padding(3, 4, 3, 4);
+            txtLeftPath.Location = new Point(190, 20);
             txtLeftPath.Name = "txtLeftPath";
             txtLeftPath.ReadOnly = true;
-            txtLeftPath.Size = new Size(868, 27);
+            txtLeftPath.Size = new Size(760, 23);
             txtLeftPath.TabIndex = 3;
             // 
             // txtRightPath
             // 
-            txtRightPath.Location = new Point(217, 80);
-            txtRightPath.Margin = new Padding(3, 4, 3, 4);
+            txtRightPath.Location = new Point(190, 60);
             txtRightPath.Name = "txtRightPath";
             txtRightPath.ReadOnly = true;
-            txtRightPath.Size = new Size(868, 27);
+            txtRightPath.Size = new Size(760, 23);
             txtRightPath.TabIndex = 4;
             // 
             // lblStatus
             // 
-            lblStatus.Location = new Point(754, 147);
+            lblStatus.Location = new Point(660, 110);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(331, 48);
+            lblStatus.Size = new Size(290, 36);
             lblStatus.TabIndex = 7;
             lblStatus.Text = "Status: Ready";
             // 
             // AddressCompareForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1143, 933);
+            ClientSize = new Size(1091, 700);
             Controls.Add(lblStatus);
             Controls.Add(progressBar);
             Controls.Add(btnCompute);
@@ -133,7 +126,6 @@
             Controls.Add(btnLoadRight);
             Controls.Add(btnLoadLeft);
             Controls.Add(dgvResults);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AddressCompareForm";
             Text = "Address Similarity - SmartRecordMatcher";
             ((System.ComponentModel.ISupportInitialize)dgvResults).EndInit();
